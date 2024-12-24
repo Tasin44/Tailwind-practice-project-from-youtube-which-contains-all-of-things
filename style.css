@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html,
+    body{
+        overflow-x:hidden;
+    }
+    body {
+        @apply font-body; /* Applies the custom font to the entire document */
+    }
+    h1, h2, h3 {
+        @apply font-display text-gray-800 font-medium; /* Customizes headers */
+    }
+    .container{
+        @apply px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-32;
+    }
+    .anchor-hover{
+        @apply border-b border-dotted border-y-gray-300 hover:border-solid hover:border-gray-500;
+    }
+    .gradient-hover-outer{
+        @apply p-[2px] bg-slate-200 hover:bg-gradient-to-br hover:from-red-300 hover:via-purple-300;
+    }
+    .gradient-hover-inner{
+        @apply bg-sky-100 w-full h-full flex flex-col items-center hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200;
+    }
+    .h2-style{
+        @apply text-5xl leading-normal sm:font-semibold max-w-2xl;
+    }
+}
+
